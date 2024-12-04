@@ -35,44 +35,46 @@ A backend service for managing food delivery operations, including menu manageme
    
 ## API Endpoints
 
-Menu Management
-   POST /menu
-   Add a new menu item.
-   Request Body:
+**POST /menu**  
+  Add a new menu item.  
+  **Request Body**:  
+  ```json
+  {
+    "name": "Pizza",
+    "price": 10,
+    "category": "Fast Food"
+  }
+Response:
 
-{
-  "name": "Pizza",
-  "price": 10,
-  "category": "Fast Food"
-}
+201 Created: Menu item added successfully.
 
-   Response:
-   201 Created: Menu item added successfully.
-   400 Bad Request: Missing required fields.
+400 Bad Request: Missing required fields.
 
-   GET /menu
-   Retrieve the list of all menu items.
-   Response:
-   200 OK: Returns a JSON array of menu items.
-   
+GET /menu
+Retrieve the list of all menu items.
+Response:
+
+200 OK: Returns a JSON array of menu items.
 Orders
-   POST /orders
-   Place an order by selecting items from the menu.
-   Request Body:
+POST /orders
+Place an order by selecting items from the menu.
+Request Body:
 
+json
+Copy code
 {
   "items": ["Pizza", "Burger"]
 }
+Response:
 
-   Response:
-   201 Created: Returns order details (order ID, items, status).
-   400 Bad Request: No items selected or invalid items.
-   
-   GET /orders/:id
-   Retrieve the details of a specific order by ID.
-   Response:
-   200 OK: Returns order details (order ID, items, status).
-   404 Not Found: Order not found.
+201 Created: Returns order details (order ID, items, status).
+400 Bad Request: No items selected or invalid items.
+GET /orders/:id
+Retrieve the details of a specific order by ID.
+Response:
+
+200 OK: Returns order details (order ID, items, status).
+404 Not Found: Order not found.
    
 ## Example Usage
 
