@@ -47,22 +47,28 @@ A backend service for managing food delivery operations, including menu manageme
     "category": "Fast Food"
   }
 
-
-
 GET /menu
 Retrieve the list of all menu items.
-
 
 Orders
 POST /orders
 Place an order by selecting items from the menu.
 **Request Body**:  
-  ```json
+```json
  {
    "items": ["Pizza", "Burger"]
  }
+```
 
+GET /orders/:id
+Retrieve the details of a specific order by ID.
 
+## Example Usage
 
-
+1. Add a Menu Item:
+   Send a POST request to /menu with item details.
+2. Place an Order:
+   Send a POST request to /orders with item names.
+3. Check Order Status:
+   Send a GET request to /orders/:id.
 
