@@ -35,7 +35,9 @@ A backend service for managing food delivery operations, including menu manageme
    
 ## API Endpoints
 
-**POST /menu**  
+### Menu Management
+
+- **POST /menu**  
   Add a new menu item.  
   **Request Body**:  
   ```json
@@ -44,6 +46,7 @@ A backend service for managing food delivery operations, including menu manageme
     "price": 10,
     "category": "Fast Food"
   }
+
 Response:
 
 201 Created: Menu item added successfully.
@@ -55,16 +58,16 @@ Retrieve the list of all menu items.
 Response:
 
 200 OK: Returns a JSON array of menu items.
+
 Orders
 POST /orders
 Place an order by selecting items from the menu.
-Request Body:
-
-json
-Copy code
+**Request Body**:  
+  ```json
 {
   "items": ["Pizza", "Burger"]
 }
+
 Response:
 
 201 Created: Returns order details (order ID, items, status).
@@ -75,7 +78,7 @@ Response:
 
 200 OK: Returns order details (order ID, items, status).
 404 Not Found: Order not found.
-   
+
 ## Example Usage
 
 1. Add a Menu Item:
