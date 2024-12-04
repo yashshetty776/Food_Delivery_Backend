@@ -47,43 +47,22 @@ A backend service for managing food delivery operations, including menu manageme
     "category": "Fast Food"
   }
 
-Response:
 
-201 Created: Menu item added successfully.
-
-400 Bad Request: Missing required fields.
 
 GET /menu
 Retrieve the list of all menu items.
-Response:
 
-200 OK: Returns a JSON array of menu items.
 
 Orders
 POST /orders
 Place an order by selecting items from the menu.
 **Request Body**:  
   ```json
-{
-  "items": ["Pizza", "Burger"]
-}
+ {
+   "items": ["Pizza", "Burger"]
+ }
 
-Response:
 
-201 Created: Returns order details (order ID, items, status).
-400 Bad Request: No items selected or invalid items.
-GET /orders/:id
-Retrieve the details of a specific order by ID.
-Response:
 
-200 OK: Returns order details (order ID, items, status).
-404 Not Found: Order not found.
 
-## Example Usage
 
-1. Add a Menu Item:
-   Send a POST request to /menu with item details.
-2. Place an Order:
-   Send a POST request to /orders with item names.
-3. Check Order Status:
-   Send a GET request to /orders/:id.
