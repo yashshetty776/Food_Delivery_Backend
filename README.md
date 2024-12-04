@@ -33,7 +33,8 @@ A backend service for managing food delivery operations, including menu manageme
     node index.js
     Server runs at http://localhost:5000.
    
-##API Endpoints
+## API Endpoints
+
 1. Menu Management
     POST /menu: Add a menu item.
       Body: { "name": "Pizza", "price": 10, "category": "Fast Food" }
@@ -43,7 +44,8 @@ A backend service for managing food delivery operations, including menu manageme
         Body: { "items": ["Pizza"] }
       GET /orders/:id: Get order details by ID.
    
-##Example Usage
+## Example Usage
+
 1. Add a Menu Item:
    Send a POST request to /menu with item details.
 2. Place an Order:
