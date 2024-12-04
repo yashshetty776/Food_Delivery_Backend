@@ -31,7 +31,7 @@ A backend service for managing food delivery operations, including menu manageme
     npm install
 3. Start the server:
     node index.js
-    Server runs at http://localhost:5000.
+    Server runs at http://localhost:3000.
    
 ## API Endpoints
 
